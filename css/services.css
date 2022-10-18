@@ -17,7 +17,7 @@
 }
 .services-image {
     width: 304px;
-    /*height: 232px;*/
+    height: 100%;
     border-radius: 8px 0 0 8px;
     /*margin-right: 32px;*/
     display: flex;
@@ -49,4 +49,21 @@
     opacity: 0.7;
     font-family: "Urbanist", Sans-serif;
     margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 767px) {
+    .services-item {
+        flex-direction: column;
+    }
+    .services-image {
+        height: 230px;
+        border-radius: 8px 8px 0 0;
+        width: 100%;
+    }
+    .services-image img {
+        border-radius: 8px 8px 0 0;
+    }
+    .services-item-two-mobile .services-description {
+        order: 2;
+    }
 }
