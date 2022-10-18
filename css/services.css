@@ -1,0 +1,52 @@
+.fintech-remove-container {
+    max-width: 1312px;
+    margin: 0 auto;
+}
+.services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    row-gap: 32px;
+}
+.services-item {
+    display: flex;
+    align-items: center;
+    background: #05143E;
+    border-radius: 8px;
+
+}
+.services-image {
+    width: 304px;
+    /*height: 232px;*/
+    border-radius: 8px 0 0 8px;
+    /*margin-right: 32px;*/
+    display: flex;
+    flex-shrink: 0;
+}
+.services-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+}
+.services-description {
+    padding: 24px 24px 24px 32px;
+}
+.services-description h4 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    font-family: "Urbanist", Sans-serif;
+    margin-bottom: 16px;
+}
+.services-description p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    opacity: 0.7;
+    font-family: "Urbanist", Sans-serif;
+    margin-bottom: 16px;
+}
