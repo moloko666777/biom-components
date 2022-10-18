@@ -1,0 +1,60 @@
+.fintech-remove-container {
+    max-width: 1312px;
+    margin: 0 auto;
+}
+.game-dev {
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    margin: 0 auto;
+}
+.game-dev-item {
+    width: 192px;
+}
+.game-dev-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 0;
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin: 0 auto 12px auto;
+}
+.game-dev-description {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    font-family: "Urbanist", Sans-serif;
+}
+.game-dev-tech {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 32px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .game-dev-tech {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .game-dev {
+        width: 100%;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    .game-dev-item {
+        width: 47%;
+    }
+}
