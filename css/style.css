@@ -821,7 +821,7 @@ html {
 
 /*how we work*/
 
-.work-wrapper {
+.work-wrapper-desktop {
     position: relative;
     /*height: 1514px;*/
     padding-top: 108px;
@@ -898,8 +898,44 @@ html {
     bottom: 0;
     right: 0;
 }
-
-
+@media only screen and (max-width: 1024px) {
+    .work-wrapper-desktop {
+        position: relative;
+        /*height: 1514px;*/
+        padding-top: 108px;
+        width: 1313px;
+        margin: 0 auto;
+        display: none;
+    }
+    .work-wrapper-mobile {
+        position: relative;
+        /*height: 1514px;*/
+        padding-top: 108px;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+    }
+    .work-wrapper-mobile .work-item {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .work-wrapper-mobile .work-item-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 4px;
+    }
+    .work-wrapper-mobile .work-item-text h4 {
+        margin-bottom: 8px;
+        font-size: 16px;
+        line-height: 32px;
+    }
+    .work-wrapper-mobile .work-item-text p {
+        font-size: 14px;
+        line-height: 21px;
+        height: 105px;
+        -webkit-line-clamp: 5;
+    }
+}
 
 /*how we work end*/
 
