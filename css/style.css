@@ -1048,6 +1048,12 @@ html {
     flex-shrink: 0;
     margin-right: 16px;
 }
+.why-us-icon-back {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .why-us {
     padding: 24px;
     width: 640px;
@@ -1056,7 +1062,7 @@ html {
     border-radius: 8px;
     display: flex;
     align-items: center;
-
+    position: relative;
 }
 .why-us-description {
 

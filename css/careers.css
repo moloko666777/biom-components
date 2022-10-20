@@ -1,0 +1,237 @@
+/* "input-animated" class refers to input where text moves/changes on focus */
+
+:root {
+    /*  MAIN COLOURS  */
+    --primary-dark: #111111;
+    --primary-light: #ffffff;
+
+    /*  STATUS COLOURS  */
+    --error: #FF3366;
+    --default: #D6EDFF;
+    --success: #81E979;
+}
+
+.fintech-remove-container {
+    max-width: 864px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    row-gap: 88px;
+    padding-top: 40px;
+    padding-bottom: 48px;
+}
+
+.contact-form div {
+    position: relative;
+}
+
+input,
+textarea {
+    background-color: transparent;
+}
+
+.input-animated {
+    width: 416px;
+}
+
+.contact-form .input-animated input {
+    display: block;
+    border: none;
+    padding: 0 0 12px 0;
+    width: 100%;
+    outline: none;
+    font-weight: 600;
+    font-size: 16px;
+    /*line-height: 24px;*/
+    letter-spacing: 0.05em;
+    color: #CED4DA;
+    font-family: "Urbanist", Sans-serif;
+}
+
+/*.contact-form .input-animated input::placeholder {*/
+/*    color: transparent;*/
+/*}*/
+.content-email {
+    position: relative;
+}
+.content-email:after {
+    position: absolute;
+    content: '*';
+    right:-10px;
+    top: 0;
+    font-weight: 600;
+    font-size: 16px;
+    /*line-height: 24px;*/
+    letter-spacing: 0.05em;
+    color: #FF3300;
+    font-family: "Urbanist", Sans-serif;
+}
+
+.contact-form .input-animated input,
+.contact-form .input-animated label {
+    color: var(--primary-light);
+}
+
+.contact-form .input-animated label {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid var(--primary-light);
+}
+
+
+/*.contact-form .input-animated label:after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    border-bottom: 2px solid var(--primary-light);*/
+/*    left: 0px;*/
+/*    bottom: -2px;*/
+/*    transform: translateX(-100%);*/
+/*    transition: transform 0.3s ease;*/
+/*}*/
+
+.contact-form .input-animated label span {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    transition: all 0.3s ease;
+    font-family: "Urbanist", Sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    /*line-height: 24px;*/
+    letter-spacing: 0.05em;
+    color: #CED4DA;
+}
+
+/* + only works for adjacent elements below the initial element */
+.contact-form .input-animated input:not(:placeholder-shown) + label:after,
+.contact-form textarea:not(:placeholder-shown) {
+    border-color: var(--error);
+}
+
+.contact-form .input-animated input:not(:placeholder-shown) + .label-name .content-name,
+.contact-form .input-animated input:not(:placeholder-shown) + .label-email .content-email{
+    color: #FF3300;
+}
+
+.contact-form .input-animated input:valid + .label-name .content-name,
+.contact-form .input-animated input:valid + .label-email .content-email{
+    color: #CED4DA;
+}
+
+.contact-form .input-animated input:valid + label:after,
+.contact-form textarea:valid  {
+    border-color: #CED4DA;
+}
+
+
+/*.contact-form .input-animated input:focus + label span,*/
+/*.contact-form .input-animated input:valid + label span,*/
+/*.contact-form .input-animated input:not(:placeholder-shown) + label span {*/
+/*    transform: translateY(-150%);*/
+/*    !*font-size: .75rem;*!*/
+/*}*/
+
+.contact-form .input-animated input:focus + label span,
+.contact-form .input-animated input:valid + label span,
+.contact-form .input-animated input + label span {
+    transform: translateY(-150%);
+    /*font-size: .75rem;*/
+}
+
+.contact-form .input-animated input:focus + label:after, .Form input:valid + label:after, .Form input + label:after{
+    transform: translateX(0%);
+}
+
+.contact-form input:invalid {
+    box-shadow: none;
+}
+
+
+/* TEXTAREA ONLY */
+.contact-form textarea {
+    margin-top: 2rem;
+    border: 1px solid var(--primary-light);
+}
+
+.contact-form textarea:focus {
+    box-shadow: inset 0px 0px 1px 1px var(--primary-light);
+    outline: none;
+}
+
+/*.contact-form textarea:not(:placeholder-shown) {*/
+/*    box-shadow: inset 0px 0px 1px 1px var(--error);*/
+/*}*/
+
+.contact-form textarea:valid {
+    box-shadow: inset 0px 0px 1px 1px var(--success);
+}
+
+.contact-form textarea:invalid {
+    box-shadow: none;
+}
+
+.contact-form textarea {
+    color: var(--primary-light);
+    padding: .75rem 1rem;
+}
+
+/*.contact-form textarea::placeholder {*/
+/*    color: var(--primary-light);*/
+/*    font-size: .75rem;*/
+/*}*/
+
+.drag-area{
+    border: 2px dashed #fff;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.drag-area.active{
+    border: 2px solid #fff;
+}
+.drag-area .icon{
+    font-size: 100px;
+    color: #fff;
+}
+.drag-area header{
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+.drag-area span{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0 15px 0;
+}
+.drag-area button{
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #5256ad;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.drag-area img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
