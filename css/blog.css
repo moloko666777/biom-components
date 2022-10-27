@@ -1,0 +1,52 @@
+.blog-quote-wrapper {
+    width: 864px;
+    margin: 0 auto;
+    padding: 32px;
+    background: #FBFBFB;
+    border-radius: 35px;
+}
+.blog-quote-icon {
+    font-weight: 400;
+    text-align: center;
+    color: #FF3300;
+    font-family: "Urbanist", Sans-serif;
+    margin-bottom: 16px;
+}
+.blog-quote-text {
+    text-align: center;
+}
+.blog-quote-text i {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #000000;
+    font-family: "Urbanist", Sans-serif;
+}
+.vacancy-tag-wrapper {
+    display: flex;
+    align-items: center;
+}
+.vacancy-tag-wrapper ul {
+display: flex;
+    align-items: center;
+}
+.vacancy-tag-wrapper li {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    padding: 4px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    margin-right: 21px;
+    font-family: "Urbanist", Sans-serif;
+}
+
+@media only screen and (max-width: 1024px) {
+    .blog-quote-wrapper {
+        width: 100%;
+    }
+}
