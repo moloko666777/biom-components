@@ -1,0 +1,42 @@
+.tab-image-wrapper {
+    display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+    .tab-image-wrapper {
+        display: none;
+    }
+    .industries-mobile {
+        width: 100%;
+    }
+    .industries-mobile ul li {
+        padding: 8px 16px;
+        background: #010B29;
+        border-radius: 4px;
+        margin-bottom: 8px;
+    }
+    .industries-mobile ul li:last-child {
+        margin-bottom: 0;
+    }
+    .industries-mobile ul li a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .industries-mobile ul li a p {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: #FFFFFF;
+        opacity: 0.7;
+        display: flex;
+        align-items: center;
+        font-family: "Urbanist", Sans-serif;
+    }
+    .industries-mobile ul li a svg {
+        margin-right: 8px;
+    }
+    .industries-mobile ul li a span{
+
+    }
+}
