@@ -1,0 +1,225 @@
+.topmenu > li {
+    display: inline-block;
+    margin-right: 32px;
+    position: relative;
+    height: 120px;
+}
+
+.topmenu {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 120px;
+    align-items: center;
+}
+.topmenu li {
+    display: flex;
+    align-items: center;
+}
+
+.active:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #FF3300;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.active:hover:before {
+    width: 100%;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+.active:hover:before li:hover {
+    fill: red;
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.topmenu > li:last-child {
+    margin-right: 0;
+}
+
+.fa {
+    color: inherit;
+    padding-left: 10px;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    display: flex;
+}
+
+.four {
+    height: 100%;
+}
+
+.four a {
+    display: block;
+    text-decoration: none;
+    outline: none;
+    font-family: "Urbanist", Sans-serif;
+    transition: .5s linear;
+}
+
+.four .submenu {
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    position: absolute;
+    /*top: 70px;*/
+    width: max-content;
+    padding: 32px 32px 16px 32px;
+}
+
+.four ul li:hover .submenu {
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+.submenu-wrapper {
+    height: 120px;
+    position: absolute;
+    /*top: 10px;*/
+}
+
+.four ul li:hover svg {
+    transform: rotate(180deg);
+    transition: 0.45s;
+}
+
+.topmenu .active:hover a {
+    color: #FF3300;
+}
+.submenu .submenu-links li a {
+    color: #fff !important;
+}
+
+.four ul li svg {
+    transition: 0.45s;
+    margin-left: 8px;
+}
+
+.submenu-links {
+    margin-right: 32px;
+}
+.submenu-links:last-child {
+    margin-right: 0;
+}
+.submenu-links li {
+    margin-bottom: 16px;
+}
+.submenu li {
+    text-transform: capitalize;
+}
+
+.submenu li a:hover {
+    color: #FF3300 !important;
+}
+
+.topmenu ul {
+    height: 62px;
+}
+
+.topmenu li a {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+.submenu li a {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+.submenu {
+    background-image: url("../img/headerbg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.four .submenu {
+    height: max-content;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1332px;
+    margin: 0 auto;
+}
+
+.topmenu li a {
+    position: relative;
+}
+
+.topmenu li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: #FF3300;
+    bottom: -48px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.topmenu li a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.submenu .submenu-links li a:before {
+    content: unset;
+}
+.topmenu li a:hover {
+    color: #FF3300;
+}
+
+.topmenu li .active {
+    color: #FF3300;
+}
+
+.header-button-contact {
+    font-family: "Urbanist", Sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 45px;
+    cursor: pointer;
+    transition: .35s;
+}
+.header-button-contact:hover {
+    background: #FFFFFF;
+    color: #FF3300;
+    transition: .35s;
+}
