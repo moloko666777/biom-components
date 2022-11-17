@@ -1,0 +1,46 @@
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 51px;
+}
+
+.projects-link img {
+    margin-bottom: 25px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.projects-link p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    font-family: "Urbanist", Sans-serif;
+    transition: .25s;
+}
+.projects-item {
+    width: 33%;
+    height: 100%;
+}
+.projects-item a {
+    cursor: pointer;
+}
+.projects-item .projects-link:hover p {
+    color: #FF3300;
+    transition: .25s;
+}
+
+@media only screen and (max-width: 1024px) {
+    .projects-item {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .projects-item {
+        width: 100%;
+    }
+}
