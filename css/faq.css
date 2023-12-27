@@ -1,0 +1,120 @@
+.faq-block-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.faq-accordion {
+    max-width: 592px;
+}
+
+.faq-accordion-wrapper {
+    width: 50%;
+}
+
+.faq-image {
+    width: 50%;
+}
+
+.faq-button {
+    display: flex;
+    cursor: pointer;
+    outline: none;
+    padding: 16px 24px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.10);
+    position: relative;
+    height: 84px;
+}
+
+.faq-button:focus {
+    outline: none;
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.faq-number {
+    color: #F30;
+    font-family: "Roboto", Sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    margin-right: 28px;
+    text-align: left;
+}
+
+.faq-button p {
+    color: #FFF;
+    font-family: "Roboto", Sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.icon-close {
+    height: 100%;
+    margin-left: 26px;
+}
+.icon-close svg {
+    width: 20px;
+    /*height: 20px;*/
+    stroke: #828282;
+    stroke-width: 2;
+    fill: none;
+    transition: transform 0.2s ease-in-out;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.faq-button[aria-expanded="false"] .icon-close .cross {
+    transform: rotate(45deg);
+}
+
+.faq-button[aria-expanded="true"] .icon-close .cross {
+    transform: rotate(0deg);
+}
+
+.faq-button[aria-expanded="true"]:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 32px;
+    left: 0px;
+    background: #FF3300;
+    border-radius: 0 4px 4px 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.faq-accordion-title {
+    margin-bottom: 24px;
+}
+.faq-accordion-title h5 {
+    margin-bottom: 0;
+}
+
+.faq-description {
+    margin-top: 8px;
+    padding: 16px 24px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #FFF;
+    font-family: "Roboto", Sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .blog-quote-wrapper {
+        width: 100%;
+    }
+}

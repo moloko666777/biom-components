@@ -1,4 +1,21 @@
 $(document).ready(function () {
+
+// faq close icon
+
+    let accButtons = document.querySelectorAll('.faq-button');
+
+    accButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            let icon = this.querySelector('.icon');
+            if (icon) {
+                this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') !== 'true');
+            }
+        });
+    });
+
+// faq close icon
+
+
     (function ($) {
         $('.owl-carousel').owlCarousel({
             loop: true,
